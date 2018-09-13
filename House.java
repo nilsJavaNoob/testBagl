@@ -8,6 +8,10 @@ public class House {
 		}
 	}
 	
+	public void settle(Owner owner){
+		
+	}
+	
 	public String toString(){
 		String result = "House\n";
 		for(Floor floor : floors){

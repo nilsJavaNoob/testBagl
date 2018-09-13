@@ -3,4 +3,8 @@ public class Floor {
 	public Floor(int number){
 		this.number = number;
 	}
-}
+	public String toString(){
+		String result = "Floor" + number;
+		return result;
+	}
+}//class
