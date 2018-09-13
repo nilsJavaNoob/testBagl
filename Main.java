@@ -6,7 +6,7 @@ public class Main {
 			//house.settle(owner);
 			
 			System.out.println("=============");
-			System.out.println(" " + house.toString());
+			System.out.println(house.toString());
 			System.out.println("=============");
 	
 	}

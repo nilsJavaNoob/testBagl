@@ -3,13 +3,16 @@ public class House {
 	public House(int floorCount){
 		floors = new Floor[floorCount];
 		
-		for(int i = 0; i<floorCount;i++){
+		for(int i = 0;  i<floorCount; i++){
 			floors[i] = new Floor(i+1);
 		}
 	}
 	
 	public String toString(){
-		String result = "House";
+		String result = "House\n";
+		for(Floor floor : floors){
+			result+=floor.toString()+"\n";
+		}
 		return result;
 	}
 }
