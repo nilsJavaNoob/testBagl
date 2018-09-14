@@ -1,7 +1,7 @@
 public class Floor {
 	
 	private int floorNumber = 0;
-	Appartment[] appartments;
+    private	Appartment[] appartments;
 
 	public Floor(int floorNumber, int countAppartment){
 		this.floorNumber = floorNumber;
@@ -16,17 +16,22 @@ public class Floor {
 	
 	public Appartment getFreeAppartment(){
 		
-		for(Appartment appartment : appartments){
+		/*for(Appartment appartment : appartments){
 			if(appartment.isFree()){				
 				//break;
 				return appartment;
 			}
 		}
 		return appartment;
+	*/
+	return null;
 	}
 	
 	public String toString(){
-		String result = "Floor" + floorNumber;
+		String result = "Floor number" + floorNumber + "\n";
+		for(Apartment appartment : appartments){
+			result+= appartment.toString() +"\n"; 
+		}
 		return result;
 	}
 }//class

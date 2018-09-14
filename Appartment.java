@@ -10,9 +10,10 @@ public class Appartment{
 			return status;
 	}
 	
-	public  void addOwnner(Owner owner){
+	public  void addOwner(Owner owner){
 		//
-		status = false;
+	//	status = false;
+	//	status = false;
 	}
 
 }//class

@@ -7,18 +7,15 @@ public class House {
 			floors[i] = new Floor(i+1,appartmentCount);
 		}
 	}
-	
 	public void settle(Owner owner){
-		
 		for(Floor floor:floors){
 			Appartment app = floor.getFreeAppartment();
+			//app exists
 			if(app !=null){
-				continue;
+				app.addOwner(owner);
+				break;
 			}
-		 app.add(owner);
-			break;
 		}
-		
 	}//settle
 	
 	// tmp_house_vizual
