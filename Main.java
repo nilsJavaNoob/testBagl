@@ -12,3 +12,6 @@ public class Main {
 	}
 
 }//class
+
+//git remote add origin https://github.com/nilsJavaNoob/testBagl.git
+//git push -u origin master
