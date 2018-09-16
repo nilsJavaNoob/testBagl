@@ -15,5 +15,8 @@ public class Appartment{
 	//	status = false;
 	//	status = false;
 	}
-
+public String toString(){
+	String result ="Appartment number - " + appNmb;
+	return result;
+}
 }//class

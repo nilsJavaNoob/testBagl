@@ -3,15 +3,13 @@ public class Floor {
 	private int floorNumber = 0;
     private	Appartment[] appartments;
 
-	public Floor(int floorNumber, int countAppartment){
+	public Floor(int floorNumber, int countAppartment, NumberGenerator generator){
 		this.floorNumber = floorNumber;
 	    appartments = new Appartment[countAppartment];
-		
 		//creating apps on the floor
 		for(int i = 0; i < countAppartment; i++){
-				appartments[i] = new Appartment(i+1);
+				appartments[i] = new Appartment(generator.getNext());
 		}
-		
 	}
 	
 	public Appartment getFreeAppartment(){
