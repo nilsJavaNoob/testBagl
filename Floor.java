@@ -24,13 +24,13 @@ public class Floor {
 		}
 		return appartment;
 	*/
-	return null;
+	 return null;
 	}
 	
 	public String toString(){
 		String result = "Floor number" + floorNumber + "\n";
-		for(Apartment appartment : appartments){
-			result+= appartment.toString() +"\n"; 
+		for(Appartment app : appartments){
+			result+= app.toString() +"\n"; 
 		}
 		return result;
 	}

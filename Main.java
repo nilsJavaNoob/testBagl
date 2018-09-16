@@ -2,11 +2,9 @@ public class Main {
 
 	 public static void main(String[] args){
 			System.out.println("Hu");
-			Owner owner = new Owner("Vasya");
 			House house = new House(16,4);
-			Appartment a = new Appartment(2);
-			
-			house.settle(owner);
+			//Owner owner = new Owner("Vasya");
+			//house.settle(owner);
 			
 			System.out.println("=============");
 			System.out.println(house.toString());
