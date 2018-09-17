@@ -7,6 +7,7 @@ public class Owner{
 	
 	public String toString(){
 		String result = "Owner\n" + name;
+		
 		/*for(Floor floor : floors){
 			result+=floor.toString()+"\n";
 		}*/

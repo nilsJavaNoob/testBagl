@@ -8,21 +8,17 @@ public class Floor {
 	    appartments = new Appartment[countAppartment];
 		//creating apps on the floor
 		for(int i = 0; i < countAppartment; i++){
-				appartments[i] = new Appartment(generator.getNext());
+				appartments[i] = new Appartment(generator.getNext(),6);
 		}
 	}
 	
 	public Appartment getFreeAppartment(){
-		
-		/*for(Appartment appartment : appartments){
+		for(Appartment appartment : appartments){
 			if(appartment.isFree()){				
-				//break;
 				return appartment;
 			}
 		}
-		return appartment;
-	*/
-	 return null;
+		return null;
 	}
 	
 	public String toString(){

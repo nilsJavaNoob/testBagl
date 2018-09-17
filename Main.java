@@ -1,8 +1,8 @@
 public class Main {
 
 	 public static void main(String[] args){
-			System.out.println("Hu");
-			House house = new House(16,4);
+
+			House house = new House(2,4);
 			//house.settle(owner);
 			
 			System.out.println("=============");

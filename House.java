@@ -16,12 +16,13 @@ public class House {
 				app.addOwner(owner);
 				break;
 			}
+			//throw RunTimeException
 		}
 	}//settle
 	
 	// tmp_house_vizual
 	public String toString(){
-		String result = "Hose\n";
+		String result = "House\n";
 		for(Floor floor : floors){
 			result+=floor.toString()+"\n";
 		}
