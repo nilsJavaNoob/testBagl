@@ -18,8 +18,9 @@ public class Appartment{
 	}
 	public int getFreeRoomIndex(){
 		for(int i = 0; i < owners.length; i++){
-			if(owners[i] )
+			//if(owners[i] )
 		}
+		return 5;
 	}
 public String toString(){
 	String result ="Appartment number - " + appNmb + "\n";
