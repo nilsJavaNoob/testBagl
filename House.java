@@ -8,6 +8,18 @@ public class House {
 			floors[i] = new Floor(i+1,appartmentCount,numberGenerator);
 		}
 	}
+	
+	// tmp_house_vizual
+	public String toString(){
+		String result = "House\n";
+		for(Floor floor : floors){
+			result+=floor.toString()+"\n";
+		}
+		return result;
+	}
+//===========================================
+
+
 	public void settle(Owner owner){
 		for(Floor floor:floors){
 			Appartment app = floor.getFreeAppartment();
@@ -20,12 +32,4 @@ public class House {
 		}
 	}//settle
 	
-	// tmp_house_vizual
-	public String toString(){
-		String result = "House\n";
-		for(Floor floor : floors){
-			result+=floor.toString()+"\n";
-		}
-		return result;
-	}
-}
+	}//class
