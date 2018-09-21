@@ -2,7 +2,7 @@ public class Main {
 
 	 public static void main(String[] args){
 
-			House house = new House(2,4);
+			House house = new House(3);
 			//house.settle(owner);
 			System.out.println(house.toString());
 		}
