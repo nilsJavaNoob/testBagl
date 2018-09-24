@@ -7,17 +7,15 @@ public class Floor {
 		
 		appartments = new Appartment[appCount];
 		for(int i =0;i<appCount;i++){
-				appartments[i] = new Appartment();
+				appartments[i] = new Appartment(i+1);
 		}
 	}
 	
 	public  String toString(){
-		String result = "|| Floor " + floorNumber + " ||\n";
+		String result = "\n|| Floor " + floorNumber + " ||\n";
 		for(Appartment app : appartments){
-			result += "\n" + app.toString(); 
+			result += app.toString()+ "\n"; 
 		}
 		return result;
 	}
-	
-	
 }//class
