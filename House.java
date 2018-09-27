@@ -1,9 +1,11 @@
 public class House {
+	
 	Floor floors[];
 	public House(int floorCount, int appartmentCount){
+		NmbrGener nmbrGen = new NmbrGener();
 		floors  = new Floor[floorCount];
 		for(int i =0; i< floorCount;i++){
-			floors[i] = new Floor(i+1,appartmentCount);
+			floors[i] = new Floor(i+1,appartmentCount,nmbrGen);
 		}
 	}
 	public String toString(){
