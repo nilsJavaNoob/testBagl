@@ -1,0 +1,7 @@
+setup(){
+ проверка на дебаг; resetSumm(); 
+ init NRF24; connectBEEP; 
+ connectBtn; connectRelay;
+ connectKalorifer; connectDHTs;
+ resetDisplay;
+{
