@@ -1,13 +1,14 @@
 public class Floor {
-	private int floorNumber =1;
+	private int floorNumber;
 	private Appartment appartments[];
 	
-	public Floor(int floorNumber, int appCount){
+	public Floor(int floorNumber, int appCount,NumberGenerator nmbGen){
+		System.out.println("Creatingfloor - " + floorNumber);
 		this.floorNumber = floorNumber;
 		
 		appartments = new Appartment[appCount];
 		for(int i =0;i<appCount;i++){
-				appartments[i] = new Appartment(i+1);
+				appartments[i] = new Appartment(nmbGen.getNext());
 		}
 	}
 	
