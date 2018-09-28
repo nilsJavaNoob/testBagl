@@ -2,9 +2,6 @@ public class Main {
 
 	 public static void main(String[] args){
 
-
-			House house = new House();
-
 			House house = new House(3,3);
 
 			//house.settle(owner);
