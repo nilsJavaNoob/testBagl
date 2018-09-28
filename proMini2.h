@@ -174,80 +174,49 @@ void setup(){/// ------------- SETUP --------------
 
 reset_sum();//
 
- 
-179
 #ifdef  RADIO    // Радио модуль NRF42l  первичная настройка
-180
    radio.begin();
-181
    radio.setDataRate(RF24_250KBPS);         //  выбор скорости RF24_250KBPS RF24_1MBPS RF24_2MBPS
-182
    radio.setPALevel(RF24_PA_MAX);           // выходная мощность передатчика
-183
    radio.setChannel(NRF24_CHANEL);          //тут установка канала
-184
    radio.setCRCLength(RF24_CRC_16);         // использовать контрольную сумму в 16 бит
-185
    radio.setAutoAck(1);                 // выключить аппаратное потверждение
-186
 // radio.enableDynamicPayloads();           // разрешить Dynamic Payloads
-187
 // radio.enableAckPayload();                // разрешить AckPayload
-188
   radio.setRetries(10,50);                  // Количество повторов и пауза между повторами
-189
   radio.openWritingPipe(0xF0F0F0F0E1LL);    // передатчик
-190
   radio.openReadingPipe(1,0xF0F0F0F0D2LL);  // приемник
-191
   radio.startListening();
-192
 #endif
-193
   #ifdef BEEP
-194
+
      SetOutput(C,1);                      //  Настройка ноги для динамика
-195
      WritePort(C,1,LOW);
-196
   #endif
-197
+  
   SetInput(D,3);                        //  Включена кнопка
-198
   WritePort(D,3,HIGH);
-199
+
   SetOutput(C,0);                       //  Подключить Реле
-200
   WritePort(C,0,LOW);
-201
+
   SetOutput(C,2);                       //  Подключить Калорифер
-202
   WritePort(C,2,LOW);
-203
    
-204
   pinMode(PIN_DHT22a, OUTPUT);          //  Датчик DHT22 #1
-205
   digitalWrite(PIN_DHT22a, HIGH); 
-206
+
   pinMode(PIN_DHT22b, OUTPUT);          //  Датчик DHT22 #2
-207
   digitalWrite(PIN_DHT22b, HIGH); 
-208
    
-209
   reset_ili9341();   // сброс дисплея
   ========================
   readEeprom();       // Прочитать настройки
-2
-byte i=ReadPort(D,3);
-3
- if (i==0)         // Если при включении нажата кнопка то стираем Eeprom
-4
- {   settingRAM.fStart=0;
+  byte i=ReadPort(D,3);
+  if (i==0)         // Если при включении нажата кнопка то стираем Eeprom
+  {   settingRAM.fStart=0;
 
-  ========================
-210
+  //========================
   readEeprom();                         // Прочитать настройки
 211byte i=ReadPort(D,3);        // Если при включении нажата кнопка то стираем Eeprom
 212 if(i==0){
@@ -1535,29 +1504,18 @@ char hex(byte x)  // Функция для вывода в hex
  
 863
 bool reset_ili9341(void)
-864
 {
-865
   pinMode(PIN_RESET, OUTPUT);                    // Сброс дисплея сигнал активным является LOW
-866
   digitalWrite(PIN_RESET, LOW); 
-867
   delay(100);
-868
   digitalWrite(PIN_RESET, HIGH); 
-869
+
   // Дисплей
-870
   ucg.begin(UCG_FONT_MODE_TRANSPARENT);
-871
   ucg.setFont(my14x10rus); 
-872
 //   ucg.setRotate90();
-873
   ucg.setRotate270();
-874
   ucg.clearScreen();
-875
 }
 876
  
